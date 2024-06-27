@@ -1,16 +1,21 @@
 pipeline {
-    agent any
-
-
-    stages {
-        stage('List Files') {
-            steps {
-                bat '''
+  agent any
+  stages {
+    stage('List Files') {
+      steps {
+        bat '''
                 C:
                 cd \\
                 dir
                 '''
-            }
-        }
+      }
     }
+
+    stage('DataFactory') {
+      steps {
+        sh 'dir'
+      }
+    }
+
+  }
 }
