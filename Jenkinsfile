@@ -13,7 +13,7 @@ pipeline {
 
     stage('DataFactory') {
       steps {
-        sh 'dir'
+        bat 'dir'
       }
     }
 
